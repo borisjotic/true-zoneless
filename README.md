@@ -4,6 +4,12 @@ Proof of concept for Angular [Zoneless](https://angular.dev/guide/experimental/z
 
 ## Instructions
 
+### Install libraries
+
+```console
+npm i
+```
+
 ### Build application
 
 Following command will build application and store it's artifacts into [src/ext/side-panel/](src/ext/side-panel/).
