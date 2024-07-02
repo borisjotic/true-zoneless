@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "true zoneless",
+  "version": "0.0.1",
+  "description": "",
+  "minimum_chrome_version": "116",
+  "background": {
+    "service_worker": "/scripts/workers/worker.js"
+  },
+  "side_panel": {
+    "default_path": "side-panel/browser/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["/scripts/content/content.js"],
+      "css": ["/styles/content.css"]
+    }
+  ],
+  "permissions": ["sidePanel", "tabs", "scripting"],
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
+}
