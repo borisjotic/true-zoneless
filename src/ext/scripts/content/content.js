@@ -1,9 +1,11 @@
 'use-strict';
 
 const elem = document.querySelector('#input');
-elem.onkeyup = () => {
-  chrome.runtime.sendMessage({
-    type: 'demo',
-    data: elem.value,
-  });
-};
+if (elem) {
+  elem.onkeyup = () => {
+    chrome.runtime.sendMessage({
+      type: 'demo',
+      data: elem.value,
+    });
+  };
+}
